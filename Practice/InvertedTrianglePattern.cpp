@@ -14,7 +14,8 @@ int main()
     cout<<n;
     cout<<endl;
     t=(n%2==0)?n:n-1;
-    for(int i=t;i>=1;i--)
+    if(n%2==0)
+    {for(int i=t;i>=1;i--)
     {
         for(int k=1;k<=t-i;k++)
         {
@@ -26,5 +27,21 @@ int main()
         }
         cout<<endl;
     }
+   }
+   else
+   {
+    for(int i=t;i>=0;i--)
+    {
+        for(int k=1;k<=t-i;k++)
+        {
+            cout<<" ";
+        }
+        for(int j=1;j<=i+1;j++)
+        {
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+   }
     return 0;
 }
